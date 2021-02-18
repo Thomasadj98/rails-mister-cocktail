@@ -1,0 +1,22 @@
+<div class="headercontainer">
+  <h1>Cocktails</h1>
+</div>
+
+
+
+<div class="container">
+
+  <% @cocktails.each do |cocktail| %>
+  <div class="card" style="width: 18rem;">
+    <img src="https://source.unsplash.com/1600x900/?cocktail" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocktail.name %></h5>
+      <%= link_to "read more", cocktail_path(cocktail), class: "btn btn-primary" %>
+    </div>
+  </div>
+  <% end %>
+
+</div>
+<hr>
+<%= link_to "create new cocktail", new_cocktail_path, class: "btn btn-primary" %>
+
